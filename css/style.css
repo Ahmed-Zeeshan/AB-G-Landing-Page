@@ -20,13 +20,13 @@ html {
  }
  .main-container{
     background-color: #FFFFFF;
-    width: 1512px;
+    width: 100%;
     height: auto;
 
  }
  
  .hero-container{
-    width: 1512px;
+    width: 100%;
     height: auto;
     padding-left: 50px;
     padding-right: 50px;
@@ -101,54 +101,71 @@ html {
 
 
 
-/*  Our Partner section Styling */
-.partner-logo{
-   display: flex;
-   justify-content: center;
-   justify-items: center;
-   margin-top: 50px;
-  
+ /* prtner carousel styling */
+ .partner-logo {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  margin-top: 50px;
+}
+.partner-slide {
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 10px;
 }
 
 #partner-carousel {
-    max-width: 1480px;
-    height: 80px;
-    margin: 50px;
-  }
+  max-width: 98%;
+  height: 80px;
+  margin: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   
-  .carousel-item img {
-    max-width: 286p.4x;
-    height: auto;
-  }
+
+}
+
+#partner-carousel img {
+  max-width: 80%;
+  height: auto;
+  margin-left: 35px;
   
-  .carousel-control-prev,
-  .carousel-control-next {
-    width: 80px;
-    height: 80px;
-    margin-top: -12px;
-    font-size: 1.5rem;
-    background-color: rgba(0, 43, 94, .2);
-    border-radius: 20%;
-    transition: background-color 0.3s ease;
-  }
-  
-  .carousel-control-prev:hover,
-  .carousel-control-next:hover {
-    background-color: rgba(0, 0, 0, 0.3);
-  }
-  
-  .carousel-control-prev i,
-  .carousel-control-next i {
-    color: #002B5E;
-  }
-  
-  .carousel-control-prev {
-    left: -30px;
-  }
-  
-  .carousel-control-next {
-    right: -30px;
-  }
+}
+
+.slick-prev, .slick-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 80px;
+  font-size: 1.5rem;
+  background-color: rgba(0, 43, 94, .2);
+  border-radius: 20%;
+  transition: background-color 0.3s ease;
+}
+
+.slick-prev:hover, .slick-next:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.slick-prev i, .slick-next i {
+  color: #002B5E;
+}
+
+.slick-prev {
+  left: -30px;
+}
+
+.slick-next {
+  right: -30px;
+}
+
+
+
+
+
+
+
 
   /* book consultaion section styling */
   .book-consultaion-container{
@@ -193,11 +210,7 @@ html {
 
   /* our mission styling */
   .our-mission-container{
-    /* display: flex;
-    justify-content: space-around;
-    align-items: center; */
-   
-    width: 1512px;
+    width: 100%;
     height: 436px;
   
   }
@@ -276,7 +289,7 @@ margin-top: 50px;
 /* Footer Styling */
 
 footer{
-  width: 1512px;
+  width: 100%;
   height: 222px;
   background: #EFF6FF;
   padding-left: 50px;
@@ -373,7 +386,7 @@ footer input[type="email"] {
 /* ////////////////////////////// */
 
 /* Responsive styling */
-@media screen and (min-width: 300px) and (max-width: 1512px) {
+@media screen and (min-width: 300px) and (max-width: 100%) {
   .main-container,
   .hero-container,
   .book-consultaion-container,
@@ -447,38 +460,6 @@ color: white;
   margin-top: 30px;
 }
 
-/* our Partner sction styling */
-
-/*  Our Partner section Styling */
-.partner-logo{
-  display: flex;
-  justify-content: center;
-  justify-items: center;
-  margin-top: 50px;
- 
-}
-
-#partner-carousel {
-   max-width: 100%;
-   height: 80px;
-   margin: 50px;
- }
- 
- .carousel-item img {
-   width: 15%;
-   
- }
- 
- .carousel-control-prev,
- .carousel-control-next {
-   width: 40px;
-   height: 40px;
-   margin-top: -12px;
-   font-size: 1.5rem;
-   background-color: rgba(0, 43, 94, .2);
-   border-radius: 20%;
-   transition: background-color 0.3s ease;
- }
  .heading{
   color: #354359;
   text-transform: uppercase;
@@ -493,14 +474,6 @@ color: white;
   border-radius: 50px;
 }
  
- 
- .carousel-control-prev {
-   left: -30px;
- }
- 
- .carousel-control-next {
-   right: -30px;
- }
 
  /* book consultaion section styling */
  .book-consultaion-container{
@@ -734,6 +707,57 @@ margin-top: 30px;
 }
 
 
+ /* prtner carousel styling */
+ .partner-logo {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  margin-top: 50px;
+}
+
+
+#partner-carousel {
+  max-width: 98%;
+  height: 80px;
+  margin: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+
+}
+
+#partner-carousel img {
+  max-width: 80%;
+  height: auto;
+
+  
+}
+
+.slick-prev, .slick-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 80px;
+  font-size: 1.5rem;
+  background-color: rgba(0, 43, 94, .2);
+  border-radius: 20%;
+  transition: background-color 0.3s ease;
+  z-index: 1;
+  font-size: 30px !important;
+  
+}
+
+
+
+
+.slick-prev:hover, .slick-next:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+
 
 
 }
@@ -795,39 +819,7 @@ margin-top: 30px;
     margin-top: 30px;
   }
 
-  /* our Partner sction styling */
-
-/*  Our Partner section Styling */
-.partner-logo{
-  display: flex;
-  justify-content: center;
-  justify-items: center;
-  margin-top: 50px;
- 
-}
-
-#partner-carousel {
-   max-width: 100%;
-   height: 80px;
-   margin: 50px;
- }
- 
- .carousel-item img {
-   width: 18%;
   
-   
- }
- 
- .carousel-control-prev,
- .carousel-control-next {
-   width: 40px;
-   height: 40px;
-   margin-top: -6px;
-   font-size: 1.5rem;
-   background-color: rgba(0, 43, 94, .2);
-   border-radius: 20%;
-   transition: background-color 0.3s ease;
- }
  .heading{
   color: #354359;
   text-transform: uppercase;
@@ -843,13 +835,7 @@ margin-top: 30px;
 }
  
  
- .carousel-control-prev {
-   left: -30px;
- }
  
- .carousel-control-next {
-   right: -30px;
- }
 
    /* book consultaion section styling */
  .book-consultaion-container{
@@ -1138,39 +1124,7 @@ margin-top: 30px;
     margin-top: 0px;
   }
 
-    /* our Partner sction styling */
-
-/*  Our Partner section Styling */
-.partner-logo{
-  display: flex;
-  justify-content: center;
-  justify-items: center;
-  margin-top: 50px;
- 
-}
-
-#partner-carousel {
-   max-width: 100%;
-   height: 80px;
-   margin: 50px;
- }
- 
- .carousel-item img {
-   width: 20%;
-  
    
- }
- 
- .carousel-control-prev,
- .carousel-control-next {
-   width: 50px;
-   height: 50px;
-   margin-top: -7px;
-   font-size: 1.5rem;
-   background-color: rgba(0, 43, 94, .2);
-   border-radius: 20%;
-   transition: background-color 0.3s ease;
- }
  .heading{
   color: #354359;
   text-transform: uppercase;
@@ -1186,14 +1140,7 @@ margin-top: 30px;
 }
  
  
- .carousel-control-prev {
-   left: -30px;
- }
  
- .carousel-control-next {
-   right: -30px;
- }
-
    /* book consultaion section styling */
    .book-consultaion-container{
     width: 100%;
@@ -1482,39 +1429,7 @@ margin-top: 30px;
     max-height: 480px;
     margin-top: 0px;
   }
-     /* our Partner sction styling */
-
-/*  Our Partner section Styling */
-.partner-logo{
-  display: flex;
-  justify-content: center;
-  justify-items: center;
-  margin-top: 50px;
  
-}
-
-#partner-carousel {
-   max-width: 100%;
-   height: 80px;
-   margin: 50px;
- }
- 
- .carousel-item img {
-   width: 20%;
-  
-   
- }
- 
- .carousel-control-prev,
- .carousel-control-next {
-   width: 55px;
-   height: 55px;
-   margin-top: -8px;
-   font-size: 1.5rem;
-   background-color: rgba(0, 43, 94, .2);
-   border-radius: 20%;
-   transition: background-color 0.3s ease;
- }
  .heading{
   color: #354359;
   text-transform: uppercase;
@@ -1529,14 +1444,6 @@ margin-top: 30px;
   border-radius: 50px;
 }
  
- 
- .carousel-control-prev {
-   left: -30px;
- }
- 
- .carousel-control-next {
-   right: -30px;
- }
 
    /* book consultaion section styling */
    .book-consultaion-container{
@@ -1822,39 +1729,7 @@ margin-bottom: 10px;
     margin-top: 30px;
   }
 
-       /* our Partner sction styling */
-
-/*  Our Partner section Styling */
-.partner-logo{
-  display: flex;
-  justify-content: center;
-  justify-items: center;
-  margin-top: 50px;
  
-}
-
-#partner-carousel {
-   max-width: 100%;
-   height: 80px;
-   margin: 50px;
- }
- 
- .carousel-item img {
-   width: 20%;
-  
-   
- }
- 
- .carousel-control-prev,
- .carousel-control-next {
-   width: 65px;
-   height: 65px;
-   margin-top: -2px;
-   font-size: 1.5rem;
-   background-color: rgba(0, 43, 94, .2);
-   border-radius: 20%;
-   transition: background-color 0.3s ease;
- }
  .heading{
   color: #354359;
   text-transform: uppercase;
@@ -1870,13 +1745,7 @@ margin-bottom: 10px;
 }
  
  
- .carousel-control-prev {
-   left: -30px;
- }
  
- .carousel-control-next {
-   right: -30px;
- }
 
  
    /* book consultaion section styling */
@@ -2160,39 +2029,7 @@ margin-bottom: 10px;
     margin-top: 30px;
   }
 
-         /* our Partner sction styling */
-
-/*  Our Partner section Styling */
-.partner-logo{
-  display: flex;
-  justify-content: center;
-  justify-items: center;
-  margin-top: 50px;
  
-}
-
-#partner-carousel {
-   max-width: 100%;
-   height: 80px;
-   margin: 50px;
- }
- 
- .carousel-item img {
-   width: 20%;
-  
-   
- }
- 
- .carousel-control-prev,
- .carousel-control-next {
-   width: 70px;
-   height: 70px;
-   margin-top: -1px;
-   font-size: 1.5rem;
-   background-color: rgba(0, 43, 94, .2);
-   border-radius: 20%;
-   transition: background-color 0.3s ease;
- }
  .heading{
   color: #354359;
   text-transform: uppercase;
@@ -2208,13 +2045,7 @@ margin-bottom: 10px;
 }
  
  
- .carousel-control-prev {
-   left: -30px;
- }
  
- .carousel-control-next {
-   right: -30px;
- }
   
 
  
@@ -2508,55 +2339,6 @@ color: white;
   max-height: 534px;
 }
 
-/*  Our Partner section Styling */
-.partner-logo{
-  display: flex;
-  justify-content: center;
-  justify-items: center;
-  margin-top: 50px;
- 
-}
-
-#partner-carousel {
-   max-width: 1480px;
-   height: 80px;
-   margin: 50px;
- }
- 
- .carousel-item img {
-   max-width: 220px;
-   height: auto;
- }
- 
- .carousel-control-prev,
- .carousel-control-next {
-   width: 80px;
-   height: 80px;
-   margin-top: -12px;
-   font-size: 1.5rem;
-   background-color: rgba(0, 43, 94, .2);
-   border-radius: 20%;
-   transition: background-color 0.3s ease;
- }
- 
- .carousel-control-prev:hover,
- .carousel-control-next:hover {
-   background-color: rgba(0, 0, 0, 0.3);
- }
- 
- .carousel-control-prev i,
- .carousel-control-next i {
-   color: #002B5E;
- }
- 
- .carousel-control-prev {
-   left: -30px;
- }
- 
- .carousel-control-next {
-   right: -30px;
- }
-
  /* book consultaion section styling */
  .book-consultaion-container{
   width: 100%;
@@ -2568,9 +2350,9 @@ color: white;
 .book-consultation {
   position: fixed;
   width: 100%;
-  max-width: 1512px;
+  max-width: 100%;
   height: 30px;
-  left: 49.2%;
+  left: 49.5%;
   transform: translateX(-50%);
   top: 20%;
   background: #002B5E;
@@ -2625,15 +2407,11 @@ color: white;
 
 /* our mission styling */
 .our-mission-container{
-  /* display: flex;
-  justify-content: space-around;
-  align-items: center; */
- 
-  width: 1512px;
+  width: 100%;
   height: 436px;
 
 }
-.second-image{
+.second-image img{
   width: 100%;
   height: 662px;
 }
@@ -2673,7 +2451,7 @@ color: #354359;
 /* Footer Styling */
 
 footer{
-  width: 1512px;
+  width: 100%;
   height: 222px;
   background: #EFF6FF;
   padding-left: 50px;
